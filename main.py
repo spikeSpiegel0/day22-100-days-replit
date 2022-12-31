@@ -1,12 +1,29 @@
-print("List Generator")
+import random
+print("One To 420 👀")
 print()
+theNumber = random.randint(1,420)
+zero = 0
+count = 0
+while True:
+  theAnswer = int(input("What is yot guess? "))
+  if theAnswer <= zero:
+    print()
+    exit()
+  elif theAnswer > theNumber:
+    print("Too high")
+    print()
+    count += 1
+  elif theAnswer < theNumber:
+    print("Too low")
+    print()
+    count += 1
+  elif theAnswer == theNumber:
+    count += 1
+    print("Correct")
+    print()
+    print("It took you", count, "guesses to get it correct")
+    break
+  else:
+    print("wtf bro?")
 print()
-startImp = int(input("Start at: "))
-endImp = int(input("End before: "))
-incrValue = int(input("Inceriment between values: "))
-print()
-for i in range(startImp, endImp, incrValue):
-  if i <= 77:
-    print("\033[33m", i, "\033[0m")
-  elif i > 77:
-    print("\033[36m", i, "\033[0m")
+print("Click 'Play' to try again")
